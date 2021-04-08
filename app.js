@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises'
-import { isAccessible } from './utils/accessible.mjs'
-import program from './utils/commander.mjs'
-import { handleError } from './utils/handleerror.mjs'
+import { isAccessible } from './utils/accessible.js'
+import program from './utils/commander.js'
+import { handleError } from './utils/handleerror.js'
 import SortFiles from './module/sort.mjs'
 
 import { fileURLToPath } from 'url'
