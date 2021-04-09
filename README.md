@@ -2,4 +2,5 @@
 
 Домашнее задание 1.
 
-Финальные скриншоты результатов выполнения каждой команды в папке './screenshots/05/'
+node index.js --action="list"
+![alt text](https://github.com/RefrigeratorUA/nodejs-homework/tree/01-node-basics/screenshots/05/listContacts_final.jpg?raw=true)

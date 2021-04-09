@@ -1,8 +1,10 @@
 const fs = require('fs')
-const { resolve } = require('path')
+const { join } = require('path')
 const { v4: uuidv4 } = require('uuid')
 
-const contactsPath = resolve(__dirname, 'db/contacts.json')
+const contactsPath = join(__dirname, 'db/contacts.json')
+
+console.log(contactsPath)
 
 function listContacts() {
   fs.readFile(contactsPath, (err, data) => {
@@ -40,7 +42,7 @@ function removeContact(contactId) {
       return item
     })
     console.table(newData)
-    fs.writeFile(contactsPath, JSON.stringify(newData), err => {
+    fs.writeFile(contactsPath, JSON.stringify(newData, null, 2), err => {
       if (err) {
         handleError(err)
       }
@@ -63,7 +65,7 @@ function addContact(name = 'NONAME', email = 'NOEMAIL', phone = 'NOPHONE') {
     newData.push(item)
     console.log(`addContact() => Контакт "${item.name}" добавлен!`)
     console.table(newData)
-    fs.writeFile(contactsPath, JSON.stringify(newData), err => {
+    fs.writeFile(contactsPath, JSON.stringify(newData, null, 2), err => {
       if (err) {
         handleError(err)
       }
