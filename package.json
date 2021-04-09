@@ -34,6 +34,6 @@
     "uuidv4": "^6.2.7"
   },
   "dependencies": {
-    "commander": "6.2.0"
+    "commander": "7.2.0"
   }
 }
